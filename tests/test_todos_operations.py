@@ -3,7 +3,7 @@ from pages.assert_res import Assert_results
 from data.users import test_user
 
 
-def test_complete_todo():
+def test_complete_todo(browser_management):
     registration_page = RegistrationPage()
     asert_results = Assert_results()
     # Шаги выполнения
