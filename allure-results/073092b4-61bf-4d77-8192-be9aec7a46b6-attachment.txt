@@ -1,0 +1,4 @@
+{'level': 'SEVERE', 'message': 'https://cdn-ima.33across.com/ob.js 0:17306 "33Across Lexicon ID Mappings Provider: PID not found"', 'source': 'console-api', 'timestamp': 1734196027928}
+{'level': 'SEVERE', 'message': "https://demoqa.com/automation-practice-form - Access to XMLHttpRequest at 'https://id5-sync.com/api/esp/increment?counter=no-config' from origin 'https://demoqa.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", 'source': 'javascript', 'timestamp': 1734196028258}
+{'level': 'SEVERE', 'message': 'https://id5-sync.com/api/esp/increment?counter=no-config - Failed to load resource: net::ERR_FAILED', 'source': 'network', 'timestamp': 1734196028259}
+{'level': 'SEVERE', 'message': 'https://cdn.ad.plus/player/adplus.js 429:375 Uncaught TypeError: c(...).setup is not a function', 'source': 'javascript', 'timestamp': 1734196029585}

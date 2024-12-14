@@ -15,7 +15,6 @@ class RegistrationPage:
        with allure.step("Open brwser"):
            browser.open('https://demoqa.com/automation-practice-form')
            browser.driver.fullscreen_window()
-
        with allure.step("Fill FirstName"):
            browser.element('[id="firstName"]').type(value.first_name)
        with allure.step("Fill LastName"):

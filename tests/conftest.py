@@ -7,7 +7,6 @@ import allure
 from selenium.webdriver.chrome.options import Options
 from utils import attach
 
-
 @pytest.fixture(scope='function')
 def browser_management(request):
     options = Options()
@@ -27,11 +26,7 @@ def browser_management(request):
 
     browser = Browser(Config(driver))
 
-    yield
 
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
-    attach.add_html(browser)
-    attach.add_video(browser)
+    yield
 
     browser.quit()

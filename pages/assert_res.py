@@ -1,13 +1,13 @@
 from selene import browser, have, be
 import allure
-from pages.allure_attachments import attachments
+
+from utils import attach
 
 
 class Assert_results:
 
    @allure.step("Assert filled data with expected")
    def in_submit_form(self, value):
-
         with allure.step("Assert header name"):
             browser.element('[class="modal-header"]').should(have.text('Thanks for submitting the form'))
         with allure.step("Assert FirstName LastName"):
@@ -35,3 +35,7 @@ class Assert_results:
             browser.element('[class="table-responsive"]').should(have.text(value.adress))
         with allure.step("Assert State and city"):
             browser.element('[class="table-responsive"]').should(have.text(f'{value.state} {value.city}'))
+        attach.add_screenshot(browser)
+        attach.add_logs(browser)
+        attach.add_html(browser)
+        attach.add_video(browser)
