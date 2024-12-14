@@ -2,10 +2,12 @@ from selene import browser, have, be
 import allure
 from pages.allure_attachments import attachments
 
+
 class Assert_results:
 
    @allure.step("Assert filled data with expected")
    def in_submit_form(self, value):
+
         with allure.step("Assert header name"):
             browser.element('[class="modal-header"]').should(have.text('Thanks for submitting the form'))
         with allure.step("Assert FirstName LastName"):

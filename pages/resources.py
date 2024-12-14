@@ -6,13 +6,16 @@ from selenium.webdriver import Keys
 import allure
 from pages.allure_labels import dynamic_labels
 
-
 class RegistrationPage:
 
     @allure.step("Fill registration form valid data")
     def register(self, value):
        dynamic_labels()
-       browser.config.timeout=12
+
+       with allure.step("Open brwser"):
+           browser.open('https://demoqa.com/automation-practice-form')
+           browser.driver.fullscreen_window()
+
        with allure.step("Fill FirstName"):
            browser.element('[id="firstName"]').type(value.first_name)
        with allure.step("Fill LastName"):
@@ -68,6 +71,3 @@ class RegistrationPage:
                browser.element('[id="react-select-4-option-2"]').click()
        with allure.step("Push Submit button"):
             browser.element('[id="submit"]').click()
-
-    def new(self, value):
-        pass

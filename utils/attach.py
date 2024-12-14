@@ -4,7 +4,6 @@ import allure
 from allure_commons.types import AttachmentType
 
 
-
 def add_screenshot(browser):
 
     browser.driver.save_screenshot(
