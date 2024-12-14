@@ -22,8 +22,8 @@ def browser_management(request):
         options=options)
 
     browser.config.driver = driver
-
     browser.config.base_url = 'https://demoqa.com/automation-practice-form'
+    options.page_load_strategy = 'eager'
 
     yield
 
