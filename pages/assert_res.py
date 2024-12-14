@@ -35,7 +35,3 @@ class Assert_results:
             browser.element('[class="table-responsive"]').should(have.text(value.adress))
         with allure.step("Assert State and city"):
             browser.element('[class="table-responsive"]').should(have.text(f'{value.state} {value.city}'))
-        attach.add_screenshot(browser)
-        attach.add_logs(browser)
-        attach.add_html(browser)
-        attach.add_video(browser)

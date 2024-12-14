@@ -1,10 +1,7 @@
-import time
-
 import pytest
-from selene import Browser, Config
-from selenium import webdriver
-import allure
+from selene import browser
 from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
 from utils import attach
 
 @pytest.fixture(scope='function')
@@ -24,9 +21,14 @@ def browser_management(request):
         command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
         options=options)
 
-    browser = Browser(Config(driver))
-    browser.config.base_url = 'https://demoqa.com'
+    browser.config.driver = driver
+
+    browser.config.base_url = 'https://demoqa.com/automation-practice-form'
 
     yield
 
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
+    attach.add_html(browser)
+    attach.add_video(browser)
     browser.quit()
