@@ -9,9 +9,7 @@ from utils import attach
 
 
 @pytest.fixture(scope='function')
-def browser_management():
-
-    with allure.step("Open source page"):
+def browser_management(request):
         options = Options()
         selenoid_capabilities = {
             "browserName": "chrome",
