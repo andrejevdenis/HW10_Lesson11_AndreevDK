@@ -12,7 +12,7 @@ def browser_management(request):
         "browserVersion": "126.0",
         "selenoid:options": {
             "enableVNC": True,
-            "enableVideo": False
+            "enableVideo": True
         }
     }
 
