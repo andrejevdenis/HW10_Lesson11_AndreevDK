@@ -11,7 +11,7 @@ class RegistrationPage:
     @allure.step("Fill registration form valid data")
     def register(self, value):
        dynamic_labels()
-
+       browser.config.timeout = 12
        with allure.step("Open brwser"):
            browser.open('https://demoqa.com/automation-practice-form')
            browser.driver.fullscreen_window()

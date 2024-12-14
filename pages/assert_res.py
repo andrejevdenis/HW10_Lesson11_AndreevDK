@@ -8,6 +8,7 @@ class Assert_results:
 
    @allure.step("Assert filled data with expected")
    def in_submit_form(self, value):
+        browser.config.timeout = 12
         with allure.step("Assert header name"):
             browser.element('[class="modal-header"]').should(have.text('Thanks for submitting the form'))
         with allure.step("Assert FirstName LastName"):
