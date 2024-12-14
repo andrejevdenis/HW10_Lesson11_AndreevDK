@@ -12,6 +12,7 @@ class RegistrationPage:
     @allure.step("Fill registration form valid data")
     def register(self, value):
        dynamic_labels()
+       browser.config.timeout=12
        with allure.step("Fill FirstName"):
            browser.element('[id="firstName"]').type(value.first_name)
        with allure.step("Fill LastName"):
